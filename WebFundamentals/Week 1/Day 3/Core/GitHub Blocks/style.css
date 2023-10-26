@@ -1,0 +1,46 @@
+*{
+    margin-top: 50px;
+}
+
+h1{
+
+    text-align: center;
+    font-size: 100px;
+}
+
+.top{
+    display: flex;
+    background-color:aqua ;
+    height: 500px;
+    width: 1800px;
+    justify-content: space-around;
+}
+
+.mid{
+    display: flex;
+    background-color: chocolate;
+    height: 500px;
+    width: 1800px;
+    justify-content: space-around;
+
+}
+
+.bottom{
+    display: flex;
+
+    background-color: white;
+    height: 500px;
+    width: 1800px;
+    justify-content: space-around;
+
+}
+
+body{
+    background-color: grey;
+    margin: 50px;
+}
+
+img{
+    height: 350px;
+    width: 350px;
+}

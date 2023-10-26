@@ -1,0 +1,21 @@
+h1{
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+}
+span{
+    color:aqua;
+}
+h2{
+    background-color: blueviolet;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    background-color: aquamarine;
+    text-align: end     ;
+    text-decoration: underline;
+    padding-right: 10px;
+    color: rgb(86, 17, 86);
+}

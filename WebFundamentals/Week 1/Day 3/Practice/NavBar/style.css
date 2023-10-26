@@ -1,0 +1,37 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(56, 52, 52);
+    color: white;
+
+}
+
+ul{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    margin-left: 10px;
+}
+
+.active {   
+    font-weight: bold;
+}
+
+.btn{
+    margin-right: 10px;
+    color: white ;
+    background-color: rgb(7, 82, 107);
+    box-shadow: 2px 2px 2px black;
+}
