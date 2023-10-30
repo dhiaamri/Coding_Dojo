@@ -7,13 +7,12 @@ function login(element) {
 }
 
 function vanish(element) {
+
+
     element.remove();
 
 }
 
 function like(){
   alert("Ninja was liked");
-  
 }
-
-
