@@ -1,3 +1,8 @@
+ *{
+    margin: 0px;
+    padding:0px;
+} 
+
 .nav{
     display: flex;
     justify-content: space-between;
@@ -54,7 +59,11 @@ h1{
     background-color: white;
     padding-top: 50px;
     padding-left: 20px;
- }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
 
 .nav{
     display: flex;
@@ -178,10 +187,16 @@ main{
 }
 .white{
     margin: 3px auto auto auto;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding:20px
 }
 .white-2{
     margin: auto auto auto 2.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
 }
 
@@ -194,4 +209,13 @@ main{
 .white-2 > a{
 
     background-color: white;
+}
+
+.marker{
+    display: flex;
+    align-items: center;
+}
+
+.marker >img{
+    margin: 10px;
 }
