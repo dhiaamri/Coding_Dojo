@@ -28,6 +28,7 @@ class User :
             print(f"This user doesn't have enough points to spend, current points : {self.gold_card_points}")
         else:
             self.gold_card_points=self.gold_card_points-amount
+            
         
         
         
@@ -37,7 +38,8 @@ class User :
         
 
 dhia=User("dhia","amri","@",25)
+dhia1=User("name","last","me@me.com",29)
 dhia.enroll()
-dhia.spend_points(180)
-dhia.spend_points(30)
+dhia.spend_points(50)
+dhia.display_info()
         
