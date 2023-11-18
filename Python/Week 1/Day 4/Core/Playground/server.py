@@ -1,17 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask,render_template
 app = Flask(__name__)   
 
 
 
 
 
-
-@app.route('/play/<int:x>') 
-def play(x):
-    return render_template("index.html",x=x)
-
-
-
+@app.route('/play/<int:number>/<string:color>')
+def repeat_hello(number, color):
+    return render_template("index.html", number=number, color=color)
 
 
 

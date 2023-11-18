@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .square {background-color: blue;
+        .square {
             width: 200px;
             height: 200px;
             border: 2px black solid;}
@@ -32,8 +32,8 @@
 
     <h1>Welcome !</h1>
 <div class="container">
-    {% for i in range(0,x) %}
-    <div class="square"></div>  
+    {% for i in range(0,number) %}
+    <div class="square" style="background-color: {{color}};"></div>  
     {% endfor %}
 
 </div>
