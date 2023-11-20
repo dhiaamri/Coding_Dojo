@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- based on the folder structure on the right -->
+<!-- linking a css style sheet -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<body>
+  <h1>***Checkerboard***</h1>
+  <div class="checkerboard" style="display: grid; grid-template-columns: repeat(8, 50px); grid-template-rows: repeat(8, 50px);">
+
+    {% for i in range(0,4) %}
+    <div style="background-color: black;"></div>
+    <div style="background-color: white;"></div>
+    {% endfor %}
+
+    {% for i in range(0,4) %}
+    <div style="background-color: white;"></div>
+    <div style="background-color: black;"></div>
+    {% endfor %}
+    {% for i in range(0,4) %}
+    <div style="background-color: black;"></div>
+    <div style="background-color: white;"></div>
+    {% endfor %}
+
+    {% for i in range(0,4) %}
+    <div style="background-color: white;"></div>
+    <div style="background-color: black;"></div>
+    {% endfor %}
+    {% for i in range(0,4) %}
+    <div style="background-color: black;"></div>
+    <div style="background-color: white;"></div>
+    {% endfor %}
+
+    {% for i in range(0,4) %}
+    <div style="background-color: white;"></div>
+    <div style="background-color: black;"></div>
+    {% endfor %}
+    
+    {% for i in range(0,4) %}
+    <div style="background-color: black;"></div>
+
+    <div style="background-color: white;"></div>
+    {% endfor %}
+
+    {% for i in range(0,4) %}
+    <div style="background-color: white;"></div>
+    <div style="background-color: black;"></div>
+    {% endfor %}
+    
+  
+
+
+  </div>
+</body>
+</html>
