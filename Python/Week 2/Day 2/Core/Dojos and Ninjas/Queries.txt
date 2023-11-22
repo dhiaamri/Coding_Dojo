@@ -1,0 +1,37 @@
+INSERT INTO dojos (name) VALUES ("Python"),("mohamed"),("joe");
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM dojos ;
+
+INSERT INTO dojos (name) VALUES ("Python"),("MERN"),("JAVA");
+
+
+
+SELECT * FROM dojos_and_ninjas_schema.ninjas;
+
+INSERT INTO ninjas (first_name,last_name,age,dojo_id) VALUES ("dhia","amri",25,6),("mhamed","ahmed",25,6),("joe","doe",25,6);
+INSERT INTO ninjas (first_name,last_name,age,dojo_id) VALUES ("dhia","amri",25,5),("mhamed","ahmed",25,5),("joe","doe",25,5);
+INSERT INTO ninjas (first_name,last_name,age,dojo_id) VALUES ("dhia","amri",25,4),("mhamed","ahmed",25,4),("joe","doe",25,4);
+
+SELECT ninjas.* FROM ninjas
+JOIN dojos
+ON dojos.id = ninjas.dojo_id
+WHERE dojo_id=4;
+
+SELECT ninjas.* FROM ninjas
+JOIN dojos
+ON dojos.id = ninjas.dojo_id
+LIMIT 1;
+
+SELECT dojos.* FROM dojos,ninjas
+WHERE ninjas.id=(SELECT ninjas.id FROM ninjas ORDER BY id DESC limit 1) AND ninjas.dojo_id=dojos.id;
+
+SELECT * FROM ninjas
+JOIN dojos
+ON dojos.id = ninjas.dojo_id
+WHERE ninjas.id=6;
+
+SELECT * FROM ninjas
+JOIN dojos
+ON dojos.id = ninjas.dojo_id
