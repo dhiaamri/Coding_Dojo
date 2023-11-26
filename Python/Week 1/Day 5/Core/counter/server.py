@@ -17,6 +17,12 @@ def simple():
 
     return render_template("index.html",session=session)
 
+@app.route('/destroy',methods={'POST'})    
+def destroy():
+    session["count"]=1
+
+    return render_template("index.html",session=session)
+
 
 
 @app.route('/',methods={'POST'})     
