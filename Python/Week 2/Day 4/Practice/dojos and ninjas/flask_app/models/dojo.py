@@ -1,14 +1,13 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app import DATABASE
 
 
-
-DATABASE = "dojos_and_ninjas_schema"
 
 class Dojo:
     def __init__(self, data):
         self.id = data["id"]
-        self.first_name = data["name"]
-        self.created_at = data["created_at"]
+        self.name = data["name"]
+        self.created_at = data["created_att"]
         self.updated_at = data["updated_at"]
 
         
@@ -24,3 +23,14 @@ class Dojo:
             dojos.append(one_dojo)
 
         return dojos
+    
+    @classmethod
+    def save(cls, data):
+        query = """
+                    INSERT INTO dojos(name)
+                    VALUES (%(name)s);
+                """
+
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        # print(result)
+        return result
