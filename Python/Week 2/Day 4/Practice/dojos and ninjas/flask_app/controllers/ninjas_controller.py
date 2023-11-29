@@ -2,6 +2,7 @@ from flask_app import app
 from flask import render_template, redirect, request,session
 
 from flask_app.models.ninja import Ninja
+from flask_app.models.dojo import Dojo
 
 
 @app.route("/create/ninja", methods=["post"])
@@ -19,5 +20,6 @@ def create_ninja():
 def show_ninjas():
     data={"id" : session["id"]}
     ninjas=Ninja.get_all(data)
-    return render_template("show",ninjas=ninjas)
+    dojo=Dojo.get_one(data)
+    return render_template("show.html",ninjas=ninjas,dojo=dojo)
 

@@ -24,6 +24,17 @@ class Dojo:
 
         return dojos
     
+    
+    
+    @classmethod
+    def get_one(cls, data):
+        query = "SELECT * FROM dojos WHERE id = %(id)s;"
+
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        user = cls(result[0])
+
+        return user
+    
     @classmethod
     def save(cls, data):
         query = """
