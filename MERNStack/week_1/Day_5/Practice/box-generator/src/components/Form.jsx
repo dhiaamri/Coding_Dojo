@@ -7,7 +7,7 @@ const Form = () => {
     const [color,setColor] = useState("")
     const [colors,setColors] = useState(["red","black"])
 
-    const [height,setHeight] =useState("")
+    // const [height,setHeight] =useState("")
     const boxHandler =(e)=> {
 
         e.preventDefault();

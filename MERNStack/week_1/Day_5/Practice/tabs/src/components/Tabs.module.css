@@ -1,0 +1,15 @@
+/* Tab.module.css */
+
+/* Styles for the tab buttons */
+
+  /* Styles for the content */
+  .content {
+    opacity: 0; /* Initially hide content */
+    transition: opacity 0.3s ease-in-out; /* Apply fade-in transition */
+  }
+  
+  /* Show content with fade-in effect */
+  .tabButton.active + .content {
+    opacity: 1;
+  }
+  
