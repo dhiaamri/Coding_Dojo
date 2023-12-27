@@ -10,7 +10,8 @@ function App() {
     <>
     <Routes>
       <Route path="/home" element={<Home />}/>
-      <Route path="/:variable/:color" element={<Number />}/>
+      <Route path="/:variable/:color2/:color1" element={<Number />}/>
+      <Route path="/:variable" element={<Number />}/>
     </Routes>
     </>
   )
