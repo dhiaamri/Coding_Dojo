@@ -1,22 +1,28 @@
 import React, { useState } from 'react'
 
 
-const FormComponent = ({addPlan}) => {
-  const [plan,setPlan] = useState({content:"",status:false})
+const FormComponent = ({setPlans, plans}) => {
+  // const [plan,setPlan] = useState({content:"",status:false})
+  const [input, setInput] = useState({content: "",status:false})
   const formHandler =(e)=>{
-  
     e.preventDefault()
-    addPlan(plan)
-    setPlan({content:""})
+    if(!input.content){
+      return;
+    }
+
+    setPlans([...plans, input])
+    setInput({content:""})
   }
   
   return (
     <div>
     <form onSubmit={formHandler} >
+    {/* {JSON.stringify(input)} */}
+    {/* {JSON.stringify(plans)} */}
     <input
           type="text"
-          onChange={(e)=>setPlan({content: e.target.value,status:false})}
-         value={plan.content}
+          onChange={(e)=>setInput({content: e.target.value,status:false})}
+         value={input.content}
          
         />
         <button>Add</button>
