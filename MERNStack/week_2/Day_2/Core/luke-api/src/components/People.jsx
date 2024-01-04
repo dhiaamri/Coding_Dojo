@@ -14,8 +14,11 @@ const People = () => {
   const handleLink=()=>{
     
     const myLink=JSON.stringify(person.homeworld);
-    const id=myLink.substring(31,32)
-    navigate(`/${id}`)
+    // const id=myLink.substring(31,32)
+    const arr=myLink.split("/")
+    console.log(arr);
+
+    navigate(`/${arr[5]}`)
   
     
 

@@ -39,7 +39,7 @@ class Ninja:
                """
         results = connectToMySQL(DATABASE).query_db(query, data)
         ninjas =[]
-        dojo_instance= dojo.Dojo(results[0])
+        dojo_instance= dojo.Dojo(result[0])
         for result in results:
             print(result)
             one_ninja = cls(result)

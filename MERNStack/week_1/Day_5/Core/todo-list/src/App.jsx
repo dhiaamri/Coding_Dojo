@@ -9,6 +9,7 @@ function App() {
   const [plans, setPlans] = useState(storedPlans);
   const [plan, setPlan] = useState({content:"",status:false})
   // grab all the items from local storage
+  
 
 
   // add task to local storage
@@ -32,6 +33,7 @@ function App() {
   return (
     <div>
     {/* {JSON.stringify(plans)} */}
+    
       <TodoComponent deletePlan={deletePlan} setPlans={setPlans} plans={plans}/>
       <FormComponent setPlans={setPlans} plans={plans} />
     </div>
