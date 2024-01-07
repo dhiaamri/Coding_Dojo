@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import View from './View'
 
 const Create = (props) => {
 
@@ -24,6 +25,7 @@ const Create = (props) => {
         <input type="text" onChange={(e)=>setProduct({...product,description:e.target.value})} value={product.description}/>
         <button>Submit</button>
       </form>
+      <View/>
       
     </div>
   )
